@@ -105,7 +105,7 @@ typedef enum {
 	float progress;
 	
 #if __has_feature(objc_arc)
-	id<MBProgressHUDDelegate> __weak delegate;
+	id<MBProgressHUDDelegate> __unsafe_unretained delegate;
 #else
 	id<MBProgressHUDDelegate> delegate;
 #endif
